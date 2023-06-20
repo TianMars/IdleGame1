@@ -16,7 +16,7 @@ moneyPerClickCost: 10
         gameData.money -= gameData.moneyPerClickCost
         gameData.moneyPerClick += 1;
         gameData.moneyPerClickCost *= 2
-        document.getElementById("moneyGained").innerHTML = "$" + gameData.money + " Gained"
+        document.getElementById("moneyGained").innerHTML = "$" + gameData.money + " Earned"
         document.getElementById("perClickUpgrade").innerHTML = "Fundraise (Currently Level " + gameData.moneyPerClick + ") Cost: $" + gameData.moneyPerClickCost 
       }
       
