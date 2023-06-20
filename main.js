@@ -8,7 +8,7 @@ moneyPerClickCost: 10
 
     function gainMoney() {
         gameData.money += gameData.moneyPerClick
-        document.getElementById("moneyGained").innerHTML = "$" + gameData.money + " Earned"
+        document.getElementById("moneyGained").innerHTML = "$" + gameData.money + " Gained"
 }
 
     function buymoneyPerClick() {
