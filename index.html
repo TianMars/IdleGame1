@@ -7,20 +7,27 @@
     <title>Idle Game</title>
 </head>
 <body>
+<div id="Resources">
+    <h1 id="thinksGained">Thinks: 0</h1>
+<br>
+</div>
 
-    <h1 id="moneyGained">$0 Gained</h1>
+<div id="frisbeeTime" style="display:none;">
+    <h1>Charge money to play frisbee</h1>
+</div>
+    <button onclick="gainThinks();frisbeeTime()">
+        <img src="Boof.jpg" alt="Cute Dog" style="width:200px;height:300px;">
+    </button>
+    <h3>Click on Boof the Dog to do a think</h3>
+<br>
 <br>
 
-    <button onclick="gainMoney()">Gain Money</button>
-<br>
-<br>
-
-    <button onclick="buyMoneyPerClick()" id="perClickUpgrade">Fundraise (Currently Level 1) Cost: $10</button>
+    <button onclick="buyThinksPerClick()" id="perClickUpgrade">Think about more things (Currently Level 1) Cost: 10 Thinks</button>
 <br>
 
     
     
-    
+
         <script src="main.js" charset="utf-8" type="text/javascript"></script>
 </body>
 </html>
