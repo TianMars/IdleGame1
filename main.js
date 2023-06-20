@@ -7,8 +7,8 @@ moneyPerClickCost: 10
 
 
     function gainMoney() {
-        gameData.gold += gameData.goldPerClick
-        document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
+        gameData.money += gameData.moneyPerClick
+        document.getElementById("goldMined").innerHTML = "$" + gameData.money + " Earned"
 }
 
     function buymoneyPerClick() {
@@ -16,8 +16,8 @@ moneyPerClickCost: 10
         gameData.money -= gameData.moneyPerClickCost
         gameData.moneyPerClick += 1;
         gameData.moneyPerClickCost *= 2
-        document.getElementById("moneyGained").innerHTML = "$" + gameData.gold + " Gained"
-        document.getElementById("perClickUpgrade").innerHTML = "Fundraise (Currently Level " + gameData.moneyPerClick + ") Cost: " + gameData.moneyPerClickCost + " Gold"
+        document.getElementById("moneyGained").innerHTML = "$" + gameData.money + " Gained"
+        document.getElementById("perClickUpgrade").innerHTML = "Fundraise (Currently Level " + gameData.moneyPerClick + ") Cost: $" + gameData.moneyPerClickCost 
       }
       
 }
