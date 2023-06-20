@@ -1,30 +1,30 @@
     var gameData = {
-gold: 0,
-goldPerClick: 1,
-goldPerClickCost: 10
+money: 0,
+moneyPerClick: 1,
+moneyPerClickCost: 10
 
 }
 
 
-    function mineGold() {
+    function gainMoney() {
         gameData.gold += gameData.goldPerClick
         document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
 }
 
-    function buyGoldPerClick() {
-  if (gameData.gold >= gameData.goldPerClickCost) {
-        gameData.gold -= gameData.goldPerClickCost
-        gameData.goldPerClick += 1;
-        gameData.goldPerClickCost *= 2
-        document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
-        document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
+    function buymoneyPerClick() {
+  if (gameData.money >= gameData.moneyPerClickCost) {
+        gameData.money -= gameData.moneyPerClickCost
+        gameData.moneyPerClick += 1;
+        gameData.moneyPerClickCost *= 2
+        document.getElementById("moneyGained").innerHTML = "$" + gameData.gold + " Gained"
+        document.getElementById("perClickUpgrade").innerHTML = "Fundraise (Currently Level " + gameData.moneyPerClick + ") Cost: " + gameData.moneyPerClickCost + " Gold"
       }
       
 }
 var mainGameLoop = window.setInterval(function() {
-    mineGold()
+    gainMoney()
   }, 1000)
 
   var saveGameLoop = window.setInterval(function() {
-    localStorage.setItem("goldMinerSave", JSON.stringify(gameData))
+    localStorage.setItem("idleGameSave", JSON.stringify(gameData))
   }, 15000)
