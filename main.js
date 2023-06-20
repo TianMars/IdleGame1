@@ -1,28 +1,35 @@
 var gameData = {
-  money: 0,
-  moneyPerClick: 1,
-  moneyPerClickCost: 10
+  thinks: 0,
+  thinksPerClick: 1,
+  thinksPerClickCost: 10
   
   }
   
   
-      function gainMoney() {
-          gameData.money += gameData.moneyPerClick
-          document.getElementById("moneyGained").innerHTML = "$" + gameData.money + " Gained"
+      function gainThinks() {
+          gameData.thinks += gameData.thinksPerClick
+          document.getElementById("thinksGained").innerHTML = "Thinks: " + gameData.thinks 
   }
   
-      function buyMoneyPerClick() {
-    if (gameData.money >= gameData.moneyPerClickCost) {
-          gameData.money -= gameData.moneyPerClickCost
-          gameData.moneyPerClick += 1;
-          gameData.moneyPerClickCost *= 2
-          document.getElementById("moneyGained").innerHTML = "$" + gameData.money + " Gained"
-          document.getElementById("perClickUpgrade").innerHTML = "Fundraise (Currently Level " + gameData.moneyPerClick + ") Cost: $" + gameData.moneyPerClickCost 
+      function buyThinksPerClick() {
+    if (gameData.thinks >= gameData.thinksPerClickCost) {
+          gameData.thinks -= gameData.thinksPerClickCost
+          gameData.thinksPerClick += 1;
+          gameData.thinksPerClickCost *= 2
+          document.getElementById("thinksGained").innerHTML = "Thinks: " + gameData.thinks 
+          document.getElementById("perClickUpgrade").innerHTML = "Big Thinks (Currently Level " + gameData.thinksPerClick + ") Cost: " + gameData.thinksPerClickCost + " Thinks"
         }
         
   }
+
+  function frisbeeTime() {
+    var x = document.getElementById("frisbeeTime");
+    if (thinks >= 100) and (x.style.display === "none"); {
+        x.style.display = "block";
+    } 
+  }
   var mainGameLoop = window.setInterval(function() {
-      gainMoney()
+      gainThinks()
     }, 1000)
   
   var saveGameLoop = window.setInterval(function() {
